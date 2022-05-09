@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>canvas鼠标跟随代码</title>
+<title>canvas_mousemove</title>
 <style>
    * {
 	margin:0;
@@ -17,7 +17,7 @@ body {
 </style>
 </head>
 <body>
-<canvas id="canvas">你的游览器不支持canvas</canvas>
+<canvas id="canvas">你的浏览器不支持canvas</canvas>
 
 <script>
 var canvas = document.getElementById("canvas"); /* 获取 canvas标签 */
@@ -55,15 +55,17 @@ Ball.prototype = {
     draw: function() {  //画爱心图形
         ctx.beginPath();
         ctx.moveTo(this.x, this.y);
-        ctx.bezierCurveTo(this.x, this.y - 3, this.x, this.y - 15, this.x - 25, this.y - 15); // 贝塞尔曲线 画爱心
-        ctx.bezierCurveTo(this.x - 55, this.y - 15, this.x - 55, this.y + 22.5, this.x - 55, this.y + 22.5);
-        ctx.bezierCurveTo(this.x - 55, this.y + 40, this.x - 35, this.y + 62, this.x, this.y + 80);
-        ctx.bezierCurveTo(this.x + 40, this.y + 62, this.x + 55, this.y + 40, this.x + 55, this.y + 22.5);
+        // ctx.bezierCurveTo(this.x, this.y - 3, this.x, this.y - 15, this.x - 25, this.y - 15); // 贝塞尔曲线 画爱心
+        // ctx.bezierCurveTo(this.x - 55, this.y - 15, this.x - 55, this.y + 22.5, this.x - 55, this.y + 22.5);
+        // ctx.bezierCurveTo(this.x - 55, this.y + 40, this.x - 35, this.y + 62, this.x, this.y + 80);
+        // ctx.bezierCurveTo(this.x + 40, this.y + 62, this.x + 55, this.y + 40, this.x + 55, this.y + 22.5);
         // ctx.bezierCurveTo(this.x + 55, this.y + 22.5, this.x + 55, this.y - 15, this.x + 25, this.y - 15);
-        ctx.bezierCurveTo(this.x + 10, this.y - 15, this.x, this.y - 3, this.x, this.y);
+        // ctx.bezierCurveTo(this.x + 10, this.y - 15, this.x, this.y - 3, this.x, this.y);
+        ctx.arc(this.x , this.y, 30, 0, Math.PI * 2, true);
+
         ctx.fill();
-        ctx.font = "24px serif";
-        ctx.fillText("哈哈", this.x - 25, this.y + 25)
+        ctx.font = "15px serif";
+        ctx.fillText("哈哈", this.x -15 , this.y+7 )
         ctx.fillStyle = this.color;
         ctx.globalAlpha = this.a; // 透明度
         ctx.globalCompositeOperation = 'lighter';
