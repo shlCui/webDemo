@@ -8,7 +8,7 @@
   <style>
     body {
       /* background: url('https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_1280.jpg') no-repeat; */
-      background: url(./images/beijing3.jpg);
+      background: url(./images/beijing7.jpg);
       background-size: cover;
     }
 
@@ -21,7 +21,7 @@
       text-align: center;
       border-radius: 20px;
       padding: 50px 50px;
-      position:relative;top:150px
+      position:relative;top:-100px;left :-400px;
     }
 
     h2 {
@@ -41,9 +41,9 @@
       border: 0;
       width: 60%;
       font-size: 15px;
-      color: #fff;
+      color: rgb(250, 244, 244);
       background: transparent;
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid rgb(248, 243, 243);
       padding: 5px 10px;
       outline: none;
       margin-top: 10px;
@@ -70,6 +70,38 @@
     a {
       color: #b94648;
     }
+
+    input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+
+    color : rgb(23, 62, 127);
+
+    }
+
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+
+    color : rgb(23, 62, 127);
+
+    }
+
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+
+    color : rgb(23, 62, 127);
+
+    }
+
+    input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+
+    color : rgb(23, 62, 127);
+
+    }
+
+    input::-ms-input-placeholder { /* Microsoft Edge */
+
+    color : rgb(23, 62, 127);
+
+}
+
+
   </style>
 </head>
 
@@ -93,7 +125,7 @@
         if (document.getElementById('text1').value == 'admin' 
             && document.getElementById('password1').value == '1234')
         {
-            window.location.href='./button.html';
+            window.location.href='./options.html';
         }
         else if (document.getElementById('text1').value != 'admin'){
             alert('用户名不存在！')

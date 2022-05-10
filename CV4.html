@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta content="width=device-width,user-scalable=no" name="viewport" />
+    <title>CV</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="mBan2">
+        <div id="slideBox" class="slideBox">
+            <div class="bd">
+                <ul>
+
+                    <li><a href="javascript:;"><img src="images/30.png" /></a></li> 
+                    <li><a href="javascript:;"><img src="images/31.png" /></a></li>
+                    <li><a href="javascript:;"><img src="images/32.png" /></a></li>
+                    <li><a href="javascript:;"><img src="images/33.png" /></a></li>
+                    <li><a href="javascript:;"><img src="images/34.png" /></a></li>
+                    <li><a href="javascript:;"><img src="images/35.png" /></a></li>
+                </ul>
+            </div>
+            <div class="hd">
+                <ul><li></li><li></li><li></li><li></li><li></li><li></li>  <!-- 6个 -->
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="switch">
+        <img src="images/switch.png" />
+    </div>
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+
+    <script type="text/javascript">
+        jQuery(".slideBox").slide({ mainCell: ".bd ul", effect: "fold", autoPlay: false, trigger: "click" });
+        jQuery(function () {
+            var len = jQuery(".hd ul").find("li").length;
+            var width = len * 20 - 10;
+            jQuery(".hd").css("width", width + "px").css("margin-left", "-" + width / 2 + "px");
+            jQuery(".hd").find('li').last().css("margin", "0px");
+            jQuery(".bd img").css("position", "absolute").css("left", "50%").css("transform", "translate(-50%)");
+            jQuery(".hd ul").find('li').eq('@index').click();
+        })
+
+        // 切换图片
+        jQuery('.switch').click(function (e) {
+            var index = $(".hd li").index($(".hd .on").eq(0));
+            var width = $(this).width();
+            var positionX = e.pageX - $(this).offset().left; //获取当前鼠标相对div的X坐标
+            if (positionX < width / 2) {
+                // 上一张
+                index -= 1;
+                if (index >= 0) {
+                    jQuery(".hd ul").find("li").eq(index).click();
+                }
+            } else {
+                // 下一张
+                index += 1;
+                var len = jQuery(".hd ul").find("li").length;
+                if (index <= len - 1) {
+                    jQuery(".hd ul").find("li").eq(index).click();
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

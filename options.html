@@ -11,12 +11,15 @@
       background: url(./images/login.jpeg);
       background-size: 100% 145%;} */
     body {
-    background-image: url(./images/beijing1.jpg);
+
+    margin:0;
+    padding:0;
+    background-image: url(./images/1.png);
     background-size:cover
     }
 
     .button {
-    background-color: #d0dcd1; /* 绿色 */
+    background-color: #074673; /* 绿色 */
     border: none;
     color: rgb(104, 98, 98);
     padding: 10px;
@@ -24,47 +27,33 @@
     text-decoration: none;
     display: inline-block;
     font-size: 32px;
+    border-radius: 8px;
     /* margin: 4px 2px; */
     /* cursor: pointer; */
     }
 
 
   </style>
+  <!-- <script src="js/jquery.min.js"></script> -->
 </head>
 
 <body>
+  <!-- <img src="./images/1.png" width="300" height="300"> -->
 
-    <div align="center" style="position:relative;top:330px">
-
-      <button class="button" onclick="login()">简历</button>
-
-
+    <div align="center" style="position:relative;top:700px">
+      <button class="button" onclick="login()">开始</button>
     </div>
-
-    <div align="center" style="position:relative;top:370px">
-
-      <button class="button" onclick="login()">Demo</button>
-
-    </div>
-  
 
 </body>
 
+<!-- <canvas id="c"></canvas>
+<script type="text/javascript" src="js/dmaku.js"></script> -->
+
 <script>
     function login(){
-        console.log('登录按钮点击了');
-        if (document.getElementById('text1').value == 'admin' 
-            && document.getElementById('password1').value == '1234')
-        {
-            window.location.href='./canvas_mousemove.html';
-        }
-        else if (document.getElementById('text1').value != 'admin'){
-            alert('用户名不存在！')
-        }
-        else if (document.getElementById('password1').value != '1234'){
-            alert('密码错误！')
-        }
-        // window.location.href='./canvas_mousemove.html';
+
+      window.location.href='./button2.html';
+
     }
 </script>
 
