@@ -8,18 +8,18 @@
   <style>
     body {
       /* background: url('https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_1280.jpg') no-repeat; */
-      background: url(./img/beijing1.jpeg);
-      background-size: 100% 145%;
+      background: url(./images/beijing3.jpg);
+      background-size: cover;
     }
 
     #login_box {
       width: 20%;
-      height: 400px;
+      height: 250px;
       background-color: #00000060;
       margin: auto;
       margin-top: 10%;
       text-align: center;
-      border-radius: 10px;
+      border-radius: 20px;
       padding: 50px 50px;
     }
 
@@ -92,7 +92,7 @@
         if (document.getElementById('text1').value == 'admin' 
             && document.getElementById('password1').value == '1234')
         {
-            window.location.href='./canvas_mousemove.html';
+            window.location.href='./button.html';
         }
         else if (document.getElementById('text1').value != 'admin'){
             alert('用户名不存在！')
