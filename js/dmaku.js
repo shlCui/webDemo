@@ -35,7 +35,7 @@ $(document).ready(function() {
 		$(window).resize(function(){
 			re();
 		});
-		var tp1=false ,tp2 = false,tp3 = false,tp4 = false,tp5 = false,tp6 = true,tp7 = false,tp8 = false,tp9 = false,tp0 = false;
+		var tp1=false ,tp2 = false,tp3 = false,tp4 = false,tp5 = false,tp6 = false,tp7 = false,tp8 = false,tp9 = false,tp0 = true;
 		function begin(){
 			if(tp1){
 				if(!b.c){
