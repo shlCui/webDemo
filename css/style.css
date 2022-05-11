@@ -1,5 +1,16 @@
 ﻿@charset "utf-8";
 /*CSS*/
+
+<!--
+BODY{overflow:scroll;overflow-x:hidden;}
+.s1{position  : absolute; z-index: 3; font-size : 12pt;  color     : blue;  visibility: hidden;}
+.s2{  position  : absolute; z-index: 3; font-size : 20pt;  color     : red;        visibility : hidden;}
+.s3{  position  : absolute; z-index: 3; font-size : 16pt; color     : gold;        visibility : hidden;}
+.s4{  position  : absolute; z-index: 3; font-size : 14pt;  color     : lime;        visibility : hidden;}
+-->
+
+
+
 body{
     margin:0;
     padding:0;
@@ -32,11 +43,13 @@ a:hover { color: #D40000; text-decoration: none}
     /* max-width: 70%; */
     width:70%;
     height: auto;
+    position: absolute;  z-index: -1;
   }
 .video {
   /* max-width: 70%; */
   width:70%;
   height: auto;
+  position: absolute;  z-index: -1;
 }
-.switch{overflow: hidden; z-index: 99; left: 50%;cursor:pointer;position:fixed; bottom:0;margin-left:-215px }
+.switch{overflow: hidden; z-index: 2; left: 50%;cursor:pointer;position:fixed; bottom:0;margin-left:-215px }
 /* 效果CSS结束 */
