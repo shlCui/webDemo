@@ -18,8 +18,8 @@ a {outline-style:none;color:#535353;text-decoration:none}
 a:hover { color: #D40000; text-decoration: none}
 ::-webkit-scrollbar {display: none; /* Chrome Safari */}
 /* 效果CSS开始 */
-.mBan2 { }
-.mBan2 .slideBox{ width:100%; height:auto; position:relative; }
+.mBan2 { justify-content: center;}
+.mBan2 .slideBox{ width:100%; height:auto; position:relative;justify-content: center;}
 .mBan2 .slideBox .hd{ height: 10px; overflow: hidden; position: absolute;  z-index: 1; width: 100px; left: 50%; padding: 4px 0px 0px 0px; }
 /* .mBan2 .slideBox .switch{ height: 10px; overflow: hidden; position: absolute; top: 4px; z-index: 999; width: 100px; margin-left: -46px; left: 50%; padding: 4px 0px 0px 11px; } */
 .mBan2 .slideBox .hd ul{ zoom: 1; position:fixed; bottom:0;}
