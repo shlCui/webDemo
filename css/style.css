@@ -15,7 +15,8 @@ body{
     padding:0;
     -webkit-text-size-adjust: none;
     background: url(../images/beijing8.jpg) no-repeat;
-    background-size:cover
+    background-size:100% 100%;
+    background-attachment: fixed;
 }
 ul, dl, dd, dt, ol, li, p, textarea, form, select, fieldset, table, td, div, input {margin:0;padding:0;-webkit-text-size-adjust: none}
 /* h1, h2, h3, h4, h5, h6{font-size:12px;font-weight:normal} */

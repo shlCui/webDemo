@@ -9,7 +9,11 @@
     body {
       /* background: url('https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_1280.jpg') no-repeat; */
       background: url(./images/beijing7.jpg) no-repeat;
-      background-size: cover;
+      /* background-size: cover; */
+
+      /* 这两行保证图片填满背景，会有变型 */
+      background-size:100% 100%; 
+      background-attachment: fixed;
     }
 
     #login_box {
